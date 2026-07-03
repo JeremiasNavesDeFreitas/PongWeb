@@ -1,0 +1,7 @@
+node_modules/
+scores.db
+scores.db-journal
+scores.db-wal
+scores.db-shm
+*.log
+.env

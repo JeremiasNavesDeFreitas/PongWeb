@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PongWeb</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="800" height="480"></canvas>
+
+    <div id="menu" class="overlay">
+      <h1>PongWeb</h1>
+      <label class="campo">
+        Seu nome
+        <input id="nomeJogador" type="text" maxlength="20" placeholder="Jogador1" />
+      </label>
+      <div class="modos">
+        <button id="btnVsIA">1 Jogador (vs IA)</button>
+        <button id="btnVs2P">2 Jogadores (local)</button>
+      </div>
+      <button id="btnRanking" class="link-btn">Ver ranking</button>
+      <p class="dica">P1: W / S &nbsp;&nbsp; P2: &uarr; / &darr; &nbsp;&nbsp; Espaco: pausar</p>
+    </div>
+
+    <div id="gameOver" class="overlay hidden">
+      <h2>Fim de jogo</h2>
+      <p id="goVencedor"></p>
+      <p id="goPlacar"></p>
+      <div class="botoes">
+        <button id="btnJogarNovamente">Jogar novamente</button>
+        <button id="btnPersonalizar">Personalizar</button>
+        <a id="btnApoiar" class="link-btn hidden" href="#" target="_blank" rel="noopener">Apoiar o criador</a>
+      </div>
+    </div>
+
+    <div id="loja" class="overlay hidden">
+      <h2>Loja de personalizacao</h2>
+      <p id="lojaScore"></p>
+      <div id="lojaListas"></div>
+      <button id="btnFecharLoja">Fechar</button>
+    </div>
+
+    <div id="ranking" class="overlay hidden">
+      <h2>Ranking</h2>
+      <ol id="rankingLista"></ol>
+      <button id="btnFecharRanking">Fechar</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
